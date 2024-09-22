@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/decentralized_freelance_backend"
+]
+resolver = "2"

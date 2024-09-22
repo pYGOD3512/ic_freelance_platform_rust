@@ -1,0 +1,17 @@
+{
+  "canisters": {
+    "decentralized_freelance_backend": {
+      "candid": "src/decentralized_freelance_backend/decentralized_freelance_backend.did",
+      "package": "decentralized_freelance_backend",
+      "type": "rust"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
