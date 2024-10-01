@@ -1,3 +1,28 @@
+type User = record {
+    id: text;
+    reputation: nat32;
+};
+
+type Job = record {
+    id: text;
+    title: text;
+    description: text;
+    budget: nat32;
+    client: text;
+    freelancer: opt text;
+    status: JobStatus;
+};
+
+type JobStatus = variant {
+    Open;
+    Assigned;
+    Completed;
+    Disputed;
+};
+
 service : {
-    "greet": (text) -> (text) query;
+    register_user: (text) -> (variant { Ok; Err: text });
+    post_job: (text, text, text, nat32) -> (variant { Ok: text; Err: text });
+    get_job: (text) -> (opt Job) query;
+    list_open_jobs: () -> (vec Job) query;
 }

@@ -3,3 +3,9 @@ members = [
     "src/decentralized_freelance_backend"
 ]
 resolver = "2"
+
+[workspace.dependencies]
+candid = "0.8"
+ic-cdk = "0.7"
+ic-cdk-macros = "0.6"
+serde = { version = "1.0", features = ["derive"] }
